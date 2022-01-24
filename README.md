@@ -1,3 +1,3 @@
 # Reveal-SSID-In-Python
 
-Please import subprocess module
+Only works on Windows also import subprocess module is required
