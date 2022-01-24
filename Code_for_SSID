@@ -1,12 +1,8 @@
 import subprocess
 
-user = str(input("")) 
-if user == 'Reveal_SSID':
-    nw = subprocess.check_output(['netsh', 'wlan', 'show', 'network'])
-    decoded_nw = nw.decode('ascii')
-    if(decoded_nw != None):
-        print(decoded_nw)
-    else:
-        print("No available network")
+nw = subprocess.check_output(['netsh', 'wlan', 'show', 'network'])
+decoded_nw = nw.decode('ascii')
+if(decoded_nw != None):
+    print(decoded_nw)
 else:
-    raise SyntaxError("Invalid input")
+    print("No available network")
